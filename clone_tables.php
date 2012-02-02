@@ -8,7 +8,7 @@
 //define
 define("MYSQL_USER", "ccc");
 define("MYSQL_DB", "drupal");
-define("MYSQL_PASSWORD", "F10w3rP0w3rC3nt3r");
+define("MYSQL_PASSWORD", "******");
 define("MYSQL_HOST", "localhost");
 
 if(!isset($argv[1]) || !isset($argv[2]) || !isset($argv[3])){
