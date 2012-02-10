@@ -1,18 +1,21 @@
 <?php
 /*
+ *   PHP MYSQL Table Clone Script
  *
- *
- *
- *
+ *	Author: Kory Calmes
+ *	https://github.com/kcalmes/Drupal-Site-Clone
  */
-//define
+//MYSQL_USER is of course the mysql username that will be used for backups.  Should be read only for security.
 define("MYSQL_USER", "ccc");
-define("MYSQL_DB", "drupal");
-define("MYSQL_PASSWORD", "******");
+//MYSQL_PASSWORD is the password that goes with the username from above.
+define("MYSQL_PASSWORD", "*******");
+//MYSQL_HOST is the host of the database.  For the most part this will be localhost.
 define("MYSQL_HOST", "localhost");
+//MYSQL_DB is the database where the drupal tables are located.
+define("MYSQL_DB", "drupal");
 
 if(!isset($argv[1]) || !isset($argv[2]) || !isset($argv[3])){
-	print "Error - Incorrect arguments, usage example: \nphp copy_drupal_tables current_prefix new_prefix remove_old_tables_after_copy_bool\n";
+	print "Error - Incorrect arguments, usage example: \nphp clone_tables.php current_prefix new_prefix remove_old_tables_after_copy_bool\n";
 	exit(0);
 }
 
